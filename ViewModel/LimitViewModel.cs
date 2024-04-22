@@ -19,9 +19,9 @@ namespace Version3.ViewModels
         public LimitViewModel()
         {
             Limit = new ObservableCollection<SpendLimit>();
-            Limit = LoadExpenseLimit();
+            Limit = LoadSpendLimit();
         }
-        private ObservableCollection<SpendLimit> LoadExpenseLimit()
+        private ObservableCollection<SpendLimit> LoadSpendLimit()
         {
             if (File.Exists(_path))
             {
