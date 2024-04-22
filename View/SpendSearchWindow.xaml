@@ -1,0 +1,38 @@
+﻿<Window x:Class="Version3.View.SpendSearchWindow" ResizeMode="NoResize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Version3.View"
+        mc:Ignorable="d"
+        Title="SpendSearchWindow" Height="720" Width="640">
+    <Grid>
+        <Menu Width="640" Height="60" VerticalAlignment="Top" Background="#D3B2ED" >
+            <Button Content="НАЗАД" Width="100" Height="42.25" HorizontalContentAlignment="Center" Style="{StaticResource ButtonMenu}" Margin="30,10,0,0" Click="Spend_OnClick"/>
+            <TextBlock Height="45" FontSize="28" TextAlignment="Center" Margin="40,10,0,0" HorizontalAlignment="Center">РАСХОДЫ ПО ДАТАМ</TextBlock>
+        </Menu>
+        <DatePicker x:Name="startDatePicker" SelectedDate="{Binding StartDate, Mode=TwoWay}" HorizontalAlignment="Left" Margin="100,60,0,0" Width="200" Height="40" VerticalAlignment="Top" FontSize="20"/>
+        <DatePicker x:Name="endDatePicker" SelectedDate="{Binding EndDate, Mode=TwoWay}" HorizontalAlignment="Right" Margin="0,60,100,0" Width="200" Height="40" VerticalAlignment="Top" FontSize="20"/>
+
+        <ListView FontSize="25" Margin="0,100,0,0" ItemsSource="{Binding SpendSearch}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Сумма" 
+                 DisplayMemberBinding="{Binding Cost}"/>
+                        <GridViewColumn Header="Дата" 
+                 DisplayMemberBinding="{Binding Date, StringFormat={}{0:dd/MM/yyyy}}"/>
+                        <GridViewColumn Header="Категория"
+                 DisplayMemberBinding="{Binding SpendCategoryName}"/>
+                    </GridView.Columns>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="FontSize" Value="30" />
+                            <Setter Property="IsEnabled" Value="False" />
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

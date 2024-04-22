@@ -1,26 +1,30 @@
-﻿<Window x:Class="Version3.View.WindowIncCategory"  ResizeMode="NoResize"
+﻿<Window x:Class="Version3.View.IncomeSearchWindow" ResizeMode="NoResize"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Version3.View"
         mc:Ignorable="d"
-         Title="WindowIncCategory" Height="720" Width="640">
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Income Search" Height="720" Width="640">
     <Grid>
         <Menu Width="640" Height="60" VerticalAlignment="Top" Background="#B2D1ED" >
             <Button Content="НАЗАД" Width="100" Height="42.25" HorizontalContentAlignment="Center" Style="{StaticResource ButtonMenu}" Margin="30,10,0,0" Click="Income_OnClick"/>
-            <TextBlock Height="45" FontSize="32" TextAlignment="Center" Margin="10,10,0,0">КАТЕГОРИИ ДОХОДОВ</TextBlock>
+            <TextBlock Height="45" FontSize="28" TextAlignment="Center" Margin="40,10,0,0" HorizontalAlignment="Center">ДОХОДЫ ПО ДАТАМ</TextBlock>
         </Menu>
-        <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="30,75,0,0" Style="{StaticResource ButtonIncCategoryMenu}" Command="{Binding AddIncCategory}"/>
-        <Button Content="ИЗМЕНИТЬ" HorizontalAlignment="Center" Margin="0,75,0,0" Style="{StaticResource ButtonIncCategoryMenu}" Command="{Binding EditIncCategory}"/>
-        <Button Content="УДАЛИТЬ" HorizontalAlignment="Right" Margin="0,75,30,0" Style="{StaticResource ButtonIncCategoryMenu}" Command="{Binding DeleteIncCategory}"/>
+        <DatePicker x:Name="startDatePicker" SelectedDate="{Binding StartDate, Mode=TwoWay}" HorizontalAlignment="Left" Margin="100,60,0,0" Width="200" Height="40" VerticalAlignment="Top" FontSize="20"/>
+        <DatePicker x:Name="endDatePicker" SelectedDate="{Binding EndDate, Mode=TwoWay}" HorizontalAlignment="Right" Margin="0,60,100,0" Width="200" Height="40" VerticalAlignment="Top" FontSize="20"/>
 
-        <ListView ItemsSource="{Binding ListIncCategory}" SelectedItem="{Binding SelectedIncCategory}" Height="570" VerticalAlignment="Bottom" FontSize="20">
+        <ListView FontSize="25" Margin="0,100,0,0" ItemsSource="{Binding IncomeSearch}">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
-                        <GridViewColumn Header="Название"
-                    DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Сумма" 
+                 DisplayMemberBinding="{Binding Cost}"/>
+                        <GridViewColumn Header="Дата" 
+                 DisplayMemberBinding="{Binding Date, StringFormat={}{0:dd/MM/yyyy}}"/>
+                        <GridViewColumn Header="Категория"
+                 DisplayMemberBinding="{Binding IncomeCategoryName}"/>
                     </GridView.Columns>
                     <GridView.ColumnHeaderContainerStyle>
                         <Style TargetType="{x:Type GridViewColumnHeader}">

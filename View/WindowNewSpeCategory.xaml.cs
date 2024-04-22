@@ -2,9 +2,9 @@
 
 namespace Version3.View
 {
-    public partial class WindowNewIncCategory : Window
+    public partial class WindowNewSpeCategory : Window
     {
-        public WindowNewIncCategory()
+        public WindowNewSpeCategory()
         {
             InitializeComponent();
         }

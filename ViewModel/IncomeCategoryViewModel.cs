@@ -5,6 +5,7 @@ using Version3.Models;
 using Version3.Helper;
 using Version3.View;
 using System.Windows;
+using System.Windows.Data;
 
 
 namespace Version3.ViewModel
@@ -77,7 +78,9 @@ namespace Version3.ViewModel
                     {
                         inccategory.Name = tempIncCategory.Name;
                         db.SaveChanges();
-                        OnPropertyChanged("SelectedCategory");
+                        OnPropertyChanged("SelectedIncCategory");
+                        ICollectionView view = CollectionViewSource.GetDefaultView(ListIncCategory);
+                        view.Refresh();
                     }
                 }, (obj) => SelectedIncCategory != null && ListIncCategory.Count > 0));
             }

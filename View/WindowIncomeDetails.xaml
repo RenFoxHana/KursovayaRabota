@@ -1,0 +1,38 @@
+﻿<Window x:Class="Version3.View.WindowIncomeDetails" ResizeMode="NoResize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Version3.View"
+        mc:Ignorable="d"
+        Title="WindowIncomeDetails" Height="720" Width="640">
+    <Grid>
+        <Menu Width="640" Height="60" VerticalAlignment="Top" Background="#B2D1ED" >
+            <Button Content="НАЗАД" Width="100" Height="42.25" HorizontalContentAlignment="Center" Style="{StaticResource ButtonMenu}" Margin="15,10,0,0" Click="Income_OnClick"/>
+            <TextBlock FontSize="20" TextAlignment="Center" Margin="10,10,0,0">ДОХОДЫ ПО КАТЕГОРИИ</TextBlock>
+            <TextBlock FontSize="20" TextAlignment="Center" Margin="10,10,0,0" Text="{Binding Name}"/>
+
+        </Menu>
+        <Button Content="ИЗМЕНИТЬ" HorizontalAlignment="Center" Margin="0,75,300,0" Style="{StaticResource ButtonIncCategoryMenu}" Command="{Binding EditIncome}"/>
+        <Button Content="УДАЛИТЬ" HorizontalAlignment="Center" Margin="300,75,0,0" Style="{StaticResource ButtonIncCategoryMenu}" Command="{Binding DeleteIncome}"/>
+
+        <ListView ItemsSource="{Binding ListIncome}" Height="570" VerticalAlignment="Bottom" SelectedItem="{Binding SelectedIncome}" FontSize="25" >
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Сумма" 
+                                         DisplayMemberBinding="{Binding Cost}"/>
+                        <GridViewColumn Header="Дата" 
+                                         DisplayMemberBinding="{Binding Date, StringFormat={}{0:dd/MM/yyyy}}"/>
+                    </GridView.Columns>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="FontSize" Value="30" />
+                            <Setter Property="IsEnabled" Value="False" />
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

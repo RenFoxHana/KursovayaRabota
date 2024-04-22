@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Version3.Models;
+﻿namespace Version3.Models;
 
 public partial class SpendIncome
 {

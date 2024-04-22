@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Version3.Helper
+﻿namespace Version3.Models
 {
-    public class IncCategoryItem
+    public class SpeCategoryItem
     {
+        public int SpendCategoryId { get; set; }
         public string Name { get; set; }
         public decimal CategoryCost { get; set; }
         public decimal Percentage { get; set; }
 
-        public IncCategoryItem(string name, decimal categoryCost, decimal percentage)
+        public SpeCategoryItem(string name, decimal categoryCost, decimal percentage, int spendCategoryId)
         {
             Name = name;
             CategoryCost = categoryCost;
             Percentage = percentage;
+            SpendCategoryId = spendCategoryId;
         }
     }
 }

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Version3.Models.IncCategoryItem">
+    <Position X="7" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAQAAAAAAAAAAAAQAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IncCategoryItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Version3.Models.IncomeDataSearch">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IncomeDataSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Version3.Models.SpeCategoryItem">
+    <Position X="8.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAQAAAgAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SpeCategoryItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Version3.Models.SpendDataSearch">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAABAIAAAAAAAAA=</HashCode>
+      <FileName>Models\SpendDataSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Version3.ViewModel.IncomeCategoryItemViewModel" BaseTypeListCollapsed="true">
+    <Position X="7" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAAAAAQAgABIBACAAAQgAAAAAAAIBAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\IncomeCategoryItemViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.ViewModel.IncomeCategoryViewModel" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAhAAQAABAIAAAAAABgAAAAQAABAAEAAAAAAA=</HashCode>
+      <FileName>ViewModel\IncomeCategoryViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.ViewModel.IncomeDatesViewModel" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAQIAIAJAAAAAAggAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>ViewModel\IncomeDatesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.ViewModel.IncomeViewModel" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAIAAAQCAAAIAAAAAQAoAAEAAAAQAAgAEAAIAA=</HashCode>
+      <FileName>ViewModel\IncomeViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.ViewModel.SpendCategoryItemViewModel" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQSAgABKAAAAAQAgAAGIAQAIBAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\SpendCategoryItemViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.ViewModel.SpendCategoryViewModel" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAQQAAAAIAAAAQACwAEAAAAAAAQAAAAGAAA=</HashCode>
+      <FileName>ViewModel\SpendCategoryViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.ViewModel.SpendDatesViewModel" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQIAIAIAAAAAAggAAABAEAAAAAAEAAAAA=</HashCode>
+      <FileName>ViewModel\SpendDatesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.ViewModel.SpendViewModel" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAgAAAQSCAAAIAAAAIQQgAAGMAQAAAAgAIAAAAA=</HashCode>
+      <FileName>ViewModel\SpendViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.ViewModels.LimitViewModel" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAQAAIAAAAQAAgAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\LimitViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.Helper.RelayCommand" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helper\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Version3.Models.SpendLimit">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\SpendLimit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

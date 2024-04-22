@@ -11,4 +11,11 @@
         <Setter Property="Button.Padding" Value="3" />
         <Setter Property="Button.Background" Value="#78A2BA" />
     </Style>
+    <Style x:Key="ButtonSpeCategoryMenu">
+        <Setter Property="Button.FontSize" Value="20"/>
+        <Setter Property="Button.HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Button.VerticalAlignment" Value="Top" />
+        <Setter Property="Button.Padding" Value="3" />
+        <Setter Property="Button.Background" Value="#B8A6BE" />
+    </Style>
 </ResourceDictionary>

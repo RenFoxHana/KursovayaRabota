@@ -1,0 +1,16 @@
+﻿<Window x:Class="Version3.View.WindowLimit" ResizeMode="NoResize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Version3.View"
+        mc:Ignorable="d"
+        Title="WindowLimit" Height="300" Width="440">
+    <Grid>
+        <Menu Width="440" Height="40" VerticalAlignment="Top" Background="#FF6B33C9"></Menu>
+        <TextBlock Text="Введите лимит:" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Margin="10,80,0,0"/>
+        <TextBox x:Name="LimitTextBox" Text="{Binding Limits, Mode=TwoWay}" Height="30" Width="400" VerticalAlignment="Top" Margin="0,150,0,0" FontSize="18"/>
+        <Button Content="УСТАНОВИТЬ ЛИМИТ" Click="SetLimitButton_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                Height="30" Width="135" Background="#FFB487FF" Margin="0,0,0,20" />
+    </Grid>
+</Window>

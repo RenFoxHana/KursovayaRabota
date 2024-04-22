@@ -9,26 +9,33 @@
        Title="MainWindow" Height="720" Width="1280">
     <Grid>
         <Menu Width="1280" Height="60" VerticalAlignment="Top" Background="#D3B2ED" >
-            <Button x:Name="SpendCategory" Content="КАТЕГОРИИ" Width="169" Height="42.25" HorizontalContentAlignment="Center" Style="{StaticResource ButtonMenu}" Margin="30,10,0,0"/>
+            <Button x:Name="SpendCategory" Content="КАТЕГОРИИ" Width="169" Height="42.25" HorizontalContentAlignment="Center" Style="{StaticResource ButtonMenu}" Margin="30,10,0,0" Click="SpendCategory_OnClick"/>
             <TextBlock Width="183" Height="45" FontSize="32" TextAlignment="Center" Margin="350,10,0,0"> РАСХОДЫ</TextBlock>
             <Button x:Name="Income" Content="ДОХОДЫ" Width="169" Height="42.25" HorizontalContentAlignment="Center" Style="{StaticResource ButtonMenu}" Margin="300,10,0,0" Click="Income_OnClick"/>
         </Menu>
 
-        <lvc:PieChart Width="420" Height="420" HorizontalAlignment="Left" Margin="50,50,0,0">
-            <lvc:PieChart.Series>
-                <lvc:PieSeries Title="Series 1" Values="90" Fill="#77D065"/>
-                <lvc:PieSeries Title="Series 2" Values="5" Fill="#E85649"/>
-                <lvc:PieSeries Title="Series 3" Values="5" Fill="#F8B195"/>
-            </lvc:PieChart.Series>
-        </lvc:PieChart>
-
         <TextBlock FontSize="30" HorizontalAlignment="Left" Margin="65,100,0,0" TextWrapping="Wrap" Text="ОБЩАЯ СУММА:" VerticalAlignment="Top"/>
-        <TextBox FontSize="30" HorizontalAlignment="Left" Margin="302,98,0,0" TextWrapping="Wrap" Text="_____________" VerticalAlignment="Top" />
-        <Label Background="#D9D9D9" FontSize="30" Content="ПОИСК ПО ДАТЕ" HorizontalAlignment="Right" Margin="0,103,100,0" VerticalAlignment="Top" Width="480" Height="50"/>
-        <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="110,570,0,0" Width="300" Height="60" Style="{StaticResource ButtonMenu}"/>
-        <Button Width="350" Height="60" Content="ВЫСТАВИТЬ ЛИМИТ" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,160,30"/>
+        <TextBlock FontSize="30" HorizontalAlignment="Left" Margin="302,98,0,0" TextWrapping="Wrap" Text="{Binding TotalCost}" VerticalAlignment="Top" />
+        <Label Background="#D9D9D9" FontSize="30" Content="ПОИСК ПО ДАТЕ" HorizontalAlignment="Right" Margin="0,103,100,0" VerticalAlignment="Top" Width="480" Height="50" MouseDoubleClick="Label_MouseDoubleClick"/>
+        <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="110,570,0,0" Width="300" Height="60" Style="{StaticResource ButtonMenu}" Command="{Binding AddSpend}"/>
+        <Button Width="350" Height="60" Content="ВЫСТАВИТЬ ЛИМИТ" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,160,30" Click="Button_Click"/>
 
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Width="500" Height="400" HorizontalAlignment="Right" Margin="0,60,90,0"/>
+        <ListView ItemsSource="{Binding ListSpeCategoryItems}" Width="500" Height="400" HorizontalAlignment="Right" Margin="0,60,90,0" MouseDoubleClick="ListView_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Название категории"
+              DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Сумма" 
+               DisplayMemberBinding="{Binding CategoryCost}"/>
+                        <GridViewColumn Header="% в диаграмме"
+               DisplayMemberBinding="{Binding Percentage}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <lvc:PieChart Series="{Binding PieSeriesCollection}" Width="400" Height="400" HorizontalAlignment="Left" Margin="50,70,0,0"/>
 
     </Grid>
 </Window>
